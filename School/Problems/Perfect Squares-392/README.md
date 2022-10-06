@@ -1,6 +1,6 @@
 <div align="center">
 <h1>
-Some programs to sole [this](https://www.cemc.uwaterloo.ca/resources/potw/2020-21/English/POTWD-20-N-25-S.pdf) problem
+Some programs to solve a school problem
 </h1>
 </div>
 
