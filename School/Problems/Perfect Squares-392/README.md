@@ -8,4 +8,4 @@ A handful of programs based off of [this](https://www.cemc.uwaterloo.ca/resource
 
 [Iterate](https://github.com/28add11/RandomCollection/tree/main/School/Problems/Perfect%20Squares-392/Iterate) is the "Check every number" approach.
 
-[Sensible]() is the approach in the problem's pdf.
+[Sensible](https://github.com/28add11/RandomCollection/tree/main/School/Problems/Perfect%20Squares-392/Sensible) is the approach in the problem's pdf.
