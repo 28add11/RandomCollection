@@ -6,8 +6,8 @@
 int main()
 {
     short int total = 0;
-    short int i = 1; //the current number in the iteration
-    for(i = 0; (BASESQ * (++i * i)) < LIMIT;)
+    short int i; //the current number in the iteration
+    for(i = 1; (BASESQ * (++i * i)) < LIMIT;)
     {
         total++;
     }
