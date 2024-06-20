@@ -14,16 +14,21 @@ void addTabs(FILE *src, FILE *dst, int spacePerTab){
 		memset(outDat, '\0', MAXLINE);
 		int i = 0;
 		int dstChar = 0;
-		int count = 0;
+		int spaceCount = 0;
+		int newTabs = 0;
 		while (inpDat[i] == ' ') {
-			count++;
-			if (count == spacePerTab) {
+			spaceCount++;
+			if (spaceCount == spacePerTab) {
 				outDat[dstChar] = '\t';
 				dstChar++;
+				spaceCount = 0;
+				newTabs++;
 			}
 			i++;
+
 		}
-		strncat(outDat, inpDat, MAXLINE);
+		// Jump to proper adress in inpdat
+		strncat(outDat, inpDat + (newTabs * spacePerTab), MAXLINE);
 		fprintf(dst, "%s", outDat);
 	}
 }
