@@ -19,6 +19,10 @@ Just some assorted random programs I made for one reason or another, wether it j
    - [The C Programming Language Exersises](Practice/The%20C%20Programming%20Language)
      - [2-6 Setbits](Practice/The%20C%20Programming%20Language/2-6%20Setbits.c)
      - [2-9 Fast Bitcount](Practice/The%20C%20Programming%20Language/2-9%20bitcount%20fast.c)
+
+3. [Tools](Tools/)
+   - [tabify](Tools/tabify)
+     - A program to convert spaces in a file to tabs
    
 Expect this list to grow over time.
 
