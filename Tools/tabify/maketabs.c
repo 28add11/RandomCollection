@@ -7,13 +7,14 @@
 #define MAXFILENAME 9999
 
 void addTabs(FILE *src, FILE *dst, int spacePerTab){
-	int i = 0;
-	int dstChar = 0;
-	int count = 0;
-	char *inpDat;
-	char *outDat;
+	char inpDat[MAXLINE];
+	char outDat[MAXLINE];
 
-	while(fgets(inpDat, MAXLEN - 1, src)) {
+	while(fgets(inpDat, MAXLINE - 1, src)) {
+		memset(outDat, '\0', MAXLINE);
+		int i = 0;
+		int dstChar = 0;
+		int count = 0;
 		while (inpDat[i] == ' ') {
 			count++;
 			if (count == spacePerTab) {
@@ -22,10 +23,9 @@ void addTabs(FILE *src, FILE *dst, int spacePerTab){
 			}
 			i++;
 		}
+		strncat(outDat, inpDat, MAXLINE);
+		fprintf(dst, "%s", outDat);
 	}
-
-	strncat(outDat, inpDat, MAXLINE);
-	fputs(outDat, dst);
 }
 
 int main(int argc, char *argv[]){
