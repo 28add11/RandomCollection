@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXLEN 1000000
 #define MAXLINE 9999
 #define MAXFILENAME 9999
 
