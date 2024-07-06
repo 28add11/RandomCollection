@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform int length = -1;
+uniform float len = 0.10;
 uniform float lowThresh = 0.3;
 uniform float highThresh = 0.8;
 
@@ -19,6 +19,17 @@ void fragment() {
 	float luminance;
 	luminance = (texture(screen_texture, SCREEN_UV).r * 0.3) + (texture(screen_texture, SCREEN_UV).g * 0.59) + (texture(screen_texture, SCREEN_UV).b * 0.11);
 	
+	float pix = 0.0;
+	while(!threshold(vec2(SCREEN_UV.x, SCREEN_UV.y - pix)) && pix < len){
+		pix += (SCREEN_PIXEL_SIZE.y);
+		//if((SCREEN_UV.y - pix) < 0.0){
+		//	pix = 1.0;
+		//	break;
+		//}
+	}
 	
-	COLOR = texture(screen_texture, SCREEN_UV);
+	COLOR = texture(screen_texture, vec2(SCREEN_UV.x, SCREEN_UV.y - pix));
+	//COLOR = vec4(pix, pix, pix, 1.0);
+	//bool thresh = threshold(SCREEN_UV);
+	//OLOR = vec4(float(thresh), float(thresh), float(thresh), 1.0);
 }
